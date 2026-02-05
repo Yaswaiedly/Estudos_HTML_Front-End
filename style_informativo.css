@@ -1,3 +1,146 @@
+Pular para o conteúdo principal
+Google Sala de Aula
+Sala de Aula
+Front-End
+Início
+Agenda
+Minhas inscrições
+Pendentes
+F
+Front-End
+0
+01-2026 SAB - Designer UX / UI
+M
+Multimédia - TNM
+Turmas arquivadas
+Configurações
+Mural
+Atividades
+Pessoas
+Front-End
+Próximas atividades
+A data de entrega é amanhã
+Implementado o CSS
+
+Postada por Natália Lima De Oliveira
+Natália Lima De Oliveira
+Criado em: 16:5616:56
+Segue o código
+informativo.html
+HTML
+
+script.js
+JavaScript
+
+style_informativo.css
+CSS
+
+
+Postada por Gabriel Freitas
+Gabriel Freitas
+Criado em: 16:3816:38
+prof
+informativo.html
+HTML
+
+style_informativo.css
+CSS
+
+
+Postada por Natália Lima De Oliveira
+Natália Lima De Oliveira
+Criado em: 15:4215:42
+const container = document.getElementById('demoContainer');
+        const btnFlex = document.getElementById('btnFlex');
+        const btnGrid = document.getElementById('btnGrid');
+        const txtAxis = document.getElementById('txtAxis');
+        const txtIdeal = document.getElementById('txtIdeal');
+
+        // Criação dos itens da galeria
+        const items = 8;
+        for (let i = 1; i <= items; i++) {
+            const item = document.createElement('div');
+            item.className = 'gallery-item';
+           
+            // Gerar cor baseada no índice
+            const hue = (i * 40) % 360;
+           
+            item.innerHTML = `
+                <div class="img-box" style="background: linear-gradient(135deg, hsl(${hue}, 70%, 60%), hsl(${hue}, 70%, 40%))">
+                    Item ${i}
+                </div>
+                <div class="content-box">
+                    <h4>Card Exemplo ${i}</h4>
+                    <p>Observe como este elemento se comporta ao alternar entre os modos de exibição.</p>
+                </div>
+            `;
+            container.appendChild(item);
+        }
+
+        function setMode(mode) {
+            if (mode === 'flex') {
+                container.className = 'demo-container mode-flex';
+                btnFlex.classList.add('active-flex');
+                btnGrid.classList.remove('active-grid');
+               
+                txtAxis.innerText = "Unidimensional (Linha)";
+                txtIdeal.innerText = "O layout é calculado item a item. Ótimo para distribuir espaço em uma linha.";
+            } else {
+                container.className = 'demo-container mode-grid';
+                btnGrid.classList.add('active-grid');
+                btnFlex.classList.remove('active-flex');
+               
+                txtAxis.innerText = "Bidimensional (Grade)";
+                txtIdeal.innerText = "Define a estrutura primeiro. Alinhamento rigoroso de colunas e linhas.";
+            }
+        }
+
+Postada por Natália Lima De Oliveira
+Natália Lima De Oliveira
+Criado em: 13:4013:40
+Referência Documentação JavaScript: https://javascript.info/
+
+Postada por Natália Lima De Oliveira
+Natália Lima De Oliveira
+Criado em: OntemOntem (editado: Ontem)
+código:
+informativo.html
+HTML
+
+style_informativo.css
+CSS
+
+
+Postada por Caio Velten
+Caio Velten
+Criado em: 3 de fev.3 de fev.
+https://github.com/Velten1/game-refactor
+Atividade: "Implementado o CSS"
+Natália Lima De Oliveira postou uma nova atividade: Implementado o CSS
+Criado em: 30 de jan.30 de jan.
+
+Postada por Natália Lima De Oliveira
+Natália Lima De Oliveira
+Criado em: 30 de jan.30 de jan.
+Referência de Seletores: https://developer.mozilla.org/pt-BR/docs/Web/CSS/Reference/Selectors
+Referência de Atributos CSS: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties
+
+Postada por Natália Lima De Oliveira
+Natália Lima De Oliveira
+Criado em: 30 de jan.30 de jan. (editado: 30 de jan.)
+Segue o código fonte de referência da aula de hoje:
+interface.html
+HTML
+
+styles.css
+CSS
+
+
+Postada por Yascara Waiedly
+Yascara Waiedly
+Criado em: 29 de jan.29 de jan.
+https://github.com/Yaswaiedly/Estudos_HTML_Front-End
+Front-End
 * {
     margin: 0;
     padding: 0;
@@ -115,44 +258,49 @@ header h1 {
     gap: 20px;
     justify-content: center;
 }
-
-.mode.flex .gallery-item {
+.mode-flex .gallery-item {
+    flex: 1 1 250px;
+    max-width: 400px;
+}
+.mode-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax (250px, 1f));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px
 }
-
-.gallery-item{
-background: var(--bg-card);
-border-radius: 20px;
-overflow: hidden;
-border: 1px solid var(--border-color);
-box-shadow:0 2px 4px rgba(0, 0, 0, 0.05);
-transition: transform 0.3s ease;
-    }
-
+.gallery-item {
+    background: var(--bg-card);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
 .gallery-item:hover {
-transform: translateY(-5px);
-
+    transform: translateY(-5px);
 }
-
+.img-box {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-card);
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 .content-box {
     padding: 15px;
 }
-
 .content-box h4 {
-margin: 0 0 8px 0;
-color: var(--text-main);
+    margin: 0 0 8px 0;
+    color: var(--text-main);
 }
-
 .content-box p {
-margin: 0;
-font-size: 0.9rem;
-color: var(--text-muted);
-line-height: 1.4;
-
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.4;
 }
-
 .info-footer {
     margin-top: 40px;
     display: grid;
@@ -183,9 +331,11 @@ line-height: 1.4;
     border: 1px solid var(--footer-border-100);
     color: var(--footer-color-100);
 }
-
-@media (max-width: 600px) {
+@media (max-width: 600px){
     .controls-panel {
         flex-direction: column;
     }
 }
+
+style_informativo.css
+Exibindo style_informativo.css…
