@@ -25,3 +25,5 @@ O repositório tem como finalidade reforçar o aprendizado através de exercíci
 ## 📂 Organização
 
 Os exercícios estão separados por arquivos/pastas conforme a evolução dos conteúdos apresentados no curso.
+
+Desenvolvido por **Yaskara Waiedly** durante os estudos de Front-End.
