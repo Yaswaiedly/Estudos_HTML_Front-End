@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nível 03</title>
+</head>
+
+<body>
+
+<!-- ===================================================== -->
+<!-- 36. Crie uma tabela (<table>) simples com 2 colunas e 3 linhas -->
+<!-- ===================================================== -->
+
+<table border="1">
+
+    <!-- 37. Cabeçalho da tabela usando <thead> e <th> -->
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Ana</td>
+            <td>22</td>
+        </tr>
+
+        <tr>
+            <td>Bruno</td>
+            <td>30</td>
+        </tr>
+
+        <!-- 38. Usando colspan para mesclar 2 colunas -->
+        <tr>
+            <td colspan="2">Pessoa sem idade informada</td>
+        </tr>
+
+        <!-- 39. Usando rowspan para mesclar 2 linhas -->
+        <tr>
+            <td rowspan="2">Carlos</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>41</td>
+        </tr>
+
+    </tbody>
+</table>
+
+<hr>
+
+<!-- ===================================================== -->
+<!-- 40. Criar formulário com campo Nome -->
+<!-- ===================================================== -->
+
+<form action="/enviar" method="post">
+
+    <!-- 41. Label vinculado corretamente ao input usando for e id -->
+    <label for="nome">Nome:</label>
+    <input 
+        type="text" 
+        id="nome" 
+        name="nome"
+        required
+    >
+    <!-- 47. required deixa o campo obrigatório -->
+
+    <br><br>
+
+    <!-- 48. Placeholder no campo de e-mail -->
+    <label for="email">Email:</label>
+    <input 
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Digite seu email"
+    >
+
+    <br><br>
+
+    <!-- 42. Campo de senha -->
+    <label for="senha">Senha:</label>
+    <input 
+        type="password" 
+        id="senha" 
+        name="senha"
+    >
+
+    <br><br>
+
+    <!-- 43. Rádio para gênero -->
+    <label>Gênero:</label><br>
+
+    <input type="radio" id="masculino" name="genero" value="Masculino">
+    <label for="masculino">Masculino</label>
+
+    <input type="radio" id="feminino" name="genero" value="Feminino">
+    <label for="feminino">Feminino</label>
+
+    <br><br>
+
+    <!-- 44. Checkboxes para interesses -->
+    <label>Interesses:</label><br>
+
+    <input type="checkbox" id="esportes" name="interesses" value="Esportes">
+    <label for="esportes">Esportes</label><br>
+
+    <input type="checkbox" id="musica" name="interesses" value="Musica">
+    <label for="musica">Música</label><br>
+
+    <input type="checkbox" id="leitura" name="interesses" value="Leitura">
+    <label for="leitura">Leitura</label><br>
+
+    <br>
+
+    <!-- 45. Menu suspenso -->
+    <label for="estado">Escolha seu estado:</label>
+    <select id="estado" name="estado">
+        <option value="">Selecione...</option>
+        <option value="sp">São Paulo</option>
+        <option value="rj">Rio de Janeiro</option>
+        <option value="mg">Minas Gerais</option>
+        <option value="rs">Rio Grande do Sul</option>
+        <option value="ba">Bahia</option>
+    </select>
+
+    <br><br>
+
+    <!-- 46. Campo de várias linhas -->
+    <label for="mensagem">Mensagem:</label><br>
+    <textarea 
+        id="mensagem" 
+        name="mensagem" 
+        rows="5" 
+        cols="40">
+    </textarea>
+
+    <br><br>
+
+    <!-- 42. Botão de enviar -->
+    <input type="submit" value="Enviar">
+
+</form>
+
+<hr>
+
+<footer>
+    <p>Todos os direitos reservados © 2026</p>
+</footer>
+
+</body>
+</html>
